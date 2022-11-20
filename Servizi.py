@@ -8,9 +8,12 @@ st.set_page_config(page_title='Upspace Report', page_icon=":bar_chart:", layout=
 st.title(":bar_chart: Upspace Dashboard :rocket:")
 
 st.markdown("##")
+st.header("Seleziona il report dal menù a tendina :open_file_folder:")
+
+
 
 with st.expander("Report Servizi"):
-       st.markdown("# Report Servizi")
+       st.markdown("# Report Servizi :chart_with_upwards_trend:")
        
        st.markdown('##')
        st.markdown('##')
@@ -78,7 +81,7 @@ with st.expander("Report Servizi"):
 
 with st.expander("Report Personale"):
       
-      st.markdown("# Report Personale")
+      st.markdown("# Report Personale :chart_with_upwards_trend:")
 
 
       st.markdown('##')
@@ -154,7 +157,7 @@ with st.expander("Report Personale"):
 
 with st.expander("Report Reparti"):
       
-      st.markdown("# Report Reparti")
+      st.markdown("# Report Reparti :chart_with_upwards_trend:")
 
       st.markdown('##')
       st.markdown('##')
