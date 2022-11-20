@@ -111,18 +111,25 @@ with st.expander("Report Personale"):
           
       st.markdown("---")
           
-      left_column2, right_column2 = st.columns(2)
+      
           
-      with left_column2:
-               bar_chart = px.bar(df5, x='Personale.1', y='Ultimo Margine', title= 'Ultimo Margine', color_discrete_sequence=["#0083B8"]*len(df5),
+     
+      bar_chart = px.bar(df5, x='Personale.1', y='Ultimo Margine', title= 'Ultimo Margine', color_discrete_sequence=["#0083B8"]*len(df5),
                template='plotly_white')
-               st.plotly_chart(bar_chart)
-
-      with right_column2:
-               bar_chart1 = px.bar(df6, x='Personale.2', y='Costo Personale', title= 'Costo Personale', color_discrete_sequence=["#0083B8"]*len(df6),
+      
+     
+      bar_chart1 = px.bar(df6, x='Personale.2', y='Costo Personale', title= 'Costo Personale', color_discrete_sequence=["#0083B8"]*len(df6),
                template='plotly_white')
-               st.plotly_chart(bar_chart1)
+      
 
+      left_column2, right_column2 = st.columns(2)
+
+      left_column2.plotly_chart(bar_chart, use_container_width=True)
+      right_column2.plotly_chart(bar_chart1, use_container_width=True)
+      
+      
+      
+      
       st.markdown("---")
 
 
@@ -177,17 +184,24 @@ with st.expander("Report Reparti"):
 
       st.markdown("---")
       
-      left_column2, right_column2 = st.columns(2)
+      
 
-      with left_column2:
-          bar_chart = px.bar(df8, x='Servizi', y='Ore lavorate', title= 'Ore lavorate per reparti', color_discrete_sequence=["#0083B8"]*len(df8),
-          template='plotly_white')
-          st.plotly_chart(bar_chart)
+      
+      bar_chart = px.bar(df8, x='Servizi', y='Ore lavorate', title= 'Ore lavorate per reparti', color_discrete_sequence=["#0083B8"]*len(df8),
+        template='plotly_white')
+     
 
-      with right_column2:
-          pie_chart = px.pie(df9, names='Servizi.1', values='Primo margine', title= 'Primo Margine per reparto', template='plotly_white')
-          st.plotly_chart(pie_chart)
+      
+      pie_chart = px.pie(df9, names='Servizi.1', values='Primo margine', title= 'Primo Margine per reparto', template='plotly_white')
+     
 
+      left_column3, right_column3 = st.columns(2)
+
+      left_column3.plotly_chart(bar_chart, use_container_width=True)
+      right_column3.plotly_chart(pie_chart, use_container_width=True)
+
+     
+     
       st.markdown("---")
 
 
