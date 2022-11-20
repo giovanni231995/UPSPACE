@@ -45,8 +45,12 @@ with st.expander("Report Servizi"):
        left_column2, right_column2 = st.columns(2)
        
        with left_column2:
-        bar_chart = px.bar(df, x='Quantità', y='Servizio', title= 'Classsifica Servizi per quantità venduta', orientation="h", color_discrete_sequence=["#0083B8"]*len(df),
-        template='plotly_white')
+        bar_chart = px.bar(df, x='Quantità', 
+                           y='Servizio', 
+                           title= 'Classsifica Servizi per quantità venduta', 
+                           orientation="h", 
+                           color_discrete_sequence=["#0083B8"]*len(df),
+                           template='plotly_white')
         st.plotly_chart(bar_chart)
 
        with right_column2:
