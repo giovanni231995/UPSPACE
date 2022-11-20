@@ -42,22 +42,21 @@ with st.expander("Report Servizi"):
             
        st.markdown("---")
             
-       left_column2, right_column2 = st.columns(2)
        
-       with left_column2:
-        bar_chart = px.bar(df, x='Quantità', 
-                           y='Servizio', 
-                           title= 'Classsifica Servizi per quantità venduta', 
-                           orientation="h", 
-                           color_discrete_sequence=["#0083B8"]*len(df),
-                           template='plotly_white')
-        st.plotly_chart(bar_chart)
-
-       with right_column2:
-        bar_chart1 = px.bar(df1, x='Margine', y='Servizio.1', title= 'Classsifica Margine per servizi', orientation="h", color_discrete_sequence=["#0083B8"]*len(df),
+       bar_chart = px.bar(df, x='Quantità', y='Servizio', title= 'Classsifica Servizi per quantità venduta', orientation="h", color_discrete_sequence=["#0083B8"]*len(df),
         template='plotly_white')
-        st.plotly_chart(bar_chart1)
-        
+       
+       
+    
+       
+       bar_chart1 = px.bar(df1, x='Margine', y='Servizio.1', title= 'Classsifica Margine per servizi', orientation="h", color_discrete_sequence=["#0083B8"]*len(df),
+        template='plotly_white')
+       
+       left_column2, right_column2 = st.columns(2)    
+       left_column2.plotly_chart(bar_chart, use_container_width=True)
+       right_column2.plotly_chart(bar_chart1, use_container_width=True)
+       
+       
        st.markdown("---")
        
        left_column1, middle_column1, right_column1 = st.columns(3)
