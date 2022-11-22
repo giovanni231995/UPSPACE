@@ -7,7 +7,7 @@ from PIL import Image
 st.set_page_config(page_title='Upspace Report', page_icon=":bar_chart:", layout='wide')
 st.title(":bar_chart: Upspace Dashboard :rocket:")
 
-st.sidebar.write(f"Carica il file Excel cliccando nel link a seguire: [Repository](https://github.com/giovanni231995/UPSPACE/upload/main) --> Ricorda che il file Excel deve essere nominato: Upspace.xlsx")
+st.sidebar.write(f"Carica il file Excel cliccando nel link a seguire: [Repository](https://github.com/giovanni231995/UPSPACE/upload/main) --> Ricorda che il file Excel deve essere nominato: [Upspace.xlsx]")
 
 
 st.markdown("##")
